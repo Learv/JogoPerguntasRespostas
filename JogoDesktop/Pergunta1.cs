@@ -16,5 +16,21 @@ namespace JogoDesktop
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProxPergunta_Click(object sender, EventArgs e)
+        {
+            if (rdbResposta1.Checked == true)
+            {
+                MessageBox.Show("ACERTO!");                                 
+            }else
+            {
+                MessageBox.Show("ERRO!");
+            }
+        }
     }
 }
