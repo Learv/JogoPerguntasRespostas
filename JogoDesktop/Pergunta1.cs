@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,13 @@ namespace JogoDesktop
 {
     public partial class Pergunta1 : Form
     {
-        public Pergunta1()
+        public int id_jogador_banco;
+
+        public Pergunta1(int id_jogador)
         {
             InitializeComponent();
+
+            id_jogador_banco = id_jogador;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,12 +31,27 @@ namespace JogoDesktop
         {
             if (rdbResposta1.Checked == true)
             {
-                MessageBox.Show("ACERTO!");                                 
-            }else
+                MessageBox.Show("ACERTO!");
+                //cadastrar no banco de dados a pergunta e a resposta
+                using (SqlConnection conexao = new SqlConnection("Server=AME0556319W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
+                {
+                    using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(pergunta, resposta_correta, id_jogador) values (@PERGUNTA1,@RESPOSTA1, 2)", conexao))
+                    {
+                        comando.Parameters.AddWithValue("PERGUNTA1", lblPergunta.Text);
+                        comando.Parameters.AddWithValue("RESPOSTA1", rdbResposta1.Text);
+                        comando.Parameters.AddWithValue("ID_JOGADOR", id_jogador_banco);
+                        conexao.Open();
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            else
             {
-                MessageBox.Show("ERRO!"); 
-                 
+
+                MessageBox.Show("ERRO!");
             }
         }
     }
 }
+
+
