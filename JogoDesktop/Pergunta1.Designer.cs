@@ -112,6 +112,7 @@
             this.Controls.Add(this.rdbResposta1);
             this.Controls.Add(this.lblPergunta);
             this.Name = "Pergunta1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pergunta1";
             this.ResumeLayout(false);
             this.PerformLayout();
