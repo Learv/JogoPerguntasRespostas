@@ -93,11 +93,11 @@
             // lblPergunta
             // 
             this.lblPergunta.AutoSize = true;
-            this.lblPergunta.Location = new System.Drawing.Point(86, 51);
+            this.lblPergunta.Location = new System.Drawing.Point(86, 71);
             this.lblPergunta.Name = "lblPergunta";
-            this.lblPergunta.Size = new System.Drawing.Size(159, 13);
+            this.lblPergunta.Size = new System.Drawing.Size(178, 13);
             this.lblPergunta.TabIndex = 6;
-            this.lblPergunta.Text = "Quais são as cores do arco-íris?";
+            this.lblPergunta.Text = "Sobre um(a) protagonista, responda:";
             // 
             // Pergunta2
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.lblPergunta);
             this.Name = "Pergunta2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pergunta2";
+            this.Text = "Segunda questão";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -33,7 +33,7 @@ namespace JogoDesktop
             {
                 MessageBox.Show("ACERTO!");
                 //cadastrar no banco de dados a pergunta e a resposta
-                using (SqlConnection conexao = new SqlConnection("Server=AME0556319W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
+                using (SqlConnection conexao = new SqlConnection("Server=AME0556318W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
                 {
                     using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(pergunta, resposta_correta, id_jogador) values (@PERGUNTA1,@RESPOSTA1, @ID_JOGADOR)", conexao))
                     {
@@ -56,6 +56,26 @@ namespace JogoDesktop
 
                 MessageBox.Show("ERRO!");
             }
+        }
+
+        private void Pergunta1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbResposta1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbResposta2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

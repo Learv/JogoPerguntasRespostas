@@ -31,14 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicial));
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnPlay = new System.Windows.Forms.Button();
+            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNome
             // 
+            this.txtNome.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(118, 122);
+            this.txtNome.Location = new System.Drawing.Point(101, 82);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(286, 29);
+            this.txtNome.Size = new System.Drawing.Size(212, 29);
             this.txtNome.TabIndex = 1;
             this.txtNome.Text = "Digite seu nome";
             this.txtNome.Enter += new System.EventHandler(this.txtNome_Enter);
@@ -46,19 +49,39 @@
             // 
             // btnPlay
             // 
-            this.btnPlay.BackColor = System.Drawing.Color.LightSalmon;
+            this.btnPlay.BackColor = System.Drawing.Color.Silver;
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay.Font = new System.Drawing.Font("MT Extra", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.ForeColor = System.Drawing.Color.Maroon;
+            this.btnPlay.ForeColor = System.Drawing.Color.Black;
             this.btnPlay.Image = global::JogoDesktop.Properties.Resources.running_man_128;
             this.btnPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlay.Location = new System.Drawing.Point(118, 195);
+            this.btnPlay.Location = new System.Drawing.Point(12, 318);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(286, 88);
+            this.btnPlay.Size = new System.Drawing.Size(31, 88);
             this.btnPlay.TabIndex = 0;
             this.btnPlay.Text = "PLAY";
             this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // txtSobrenome
+            // 
+            this.txtSobrenome.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSobrenome.Location = new System.Drawing.Point(39, 165);
+            this.txtSobrenome.Name = "txtSobrenome";
+            this.txtSobrenome.Size = new System.Drawing.Size(212, 29);
+            this.txtSobrenome.TabIndex = 2;
+            this.txtSobrenome.Text = "Digite seu sobrenome";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(12, 244);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(212, 29);
+            this.txtEmail.TabIndex = 3;
+            this.txtEmail.Text = "Digite seu e-mail";
             // 
             // frmInicial
             // 
@@ -66,7 +89,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(527, 418);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnPlay);
             this.MaximizeBox = false;
@@ -84,6 +110,8 @@
 
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
 

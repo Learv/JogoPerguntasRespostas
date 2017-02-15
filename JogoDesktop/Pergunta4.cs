@@ -28,7 +28,7 @@ namespace JogoDesktop
             {
                 MessageBox.Show("ACERTO!");
                 //cadastrar no banco de dados a pergunta e a resposta
-                using (SqlConnection conexao = new SqlConnection("Server=AME0556319W10-1\\SQLEXPRESS;Database=db_PerguntasERespostas;Trusted_Connection=Yes"))
+                using (SqlConnection conexao = new SqlConnection("Server=AME0556318W10-1\\SQLEXPRESSDatabase=db_PerguntasERespostas;Trusted_Connection=Yes"))
                 {
                     using (SqlCommand comando = new SqlCommand("insert into tb_Perguntas(pergunta, resposta_correta, id_jogador) values (@PERGUNTA4,@RESPOSTA1, @ID_JOGADOR)", conexao))
                     {

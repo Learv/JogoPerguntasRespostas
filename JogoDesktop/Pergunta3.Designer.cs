@@ -112,7 +112,7 @@
             this.Controls.Add(this.lblPergunta);
             this.Name = "Pergunta3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pergunta3";
+            this.Text = "Terceira questão";
             this.ResumeLayout(false);
             this.PerformLayout();
 

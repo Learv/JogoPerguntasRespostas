@@ -7,7 +7,9 @@ use db_PerguntasERespostas
 -- inicio da criação de uma tabela chamada "Jogador" Obs: tb = table
 create table tb_Jogador(
 	id int identity primary key,
-	nome varchar(100) not null
+	nome varchar(100) not null,
+	sobrenome varchar (30),
+	email varchar (30) not null
 )
 -- termino da criação da tabela "tb_Jogador"
 
@@ -22,6 +24,9 @@ create table tb_Perguntas (
 id int identity primary key,
 pergunta varchar(max),
 resposta_correta varchar(max),
+nivel varchar(max),
+pontos int,
+id_jogador int,
 data datetime default getdate()
 )
 
@@ -39,6 +44,9 @@ delete from tb_Jogador
 
 --reseta todos os dados da tabela
 truncate table tb_Jogador
+
+--add 
+alter table tb_Jogador add email varchar (30)
 
 select * from tb_Jogador join tb_Perguntas on tb_Jogador.id = tb_Perguntas.id_Jogador
 
